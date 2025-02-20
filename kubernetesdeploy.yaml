@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankapp-svc-np-service
+  name: bankapp-eta-np-service
   labels:
     app: bankapp-eta-app
 spec:
