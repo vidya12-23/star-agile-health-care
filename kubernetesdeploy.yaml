@@ -1,37 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: healthcare-svc-deploy
+  name: bankapp-eta-deploy
   labels:
-    app: healthcare-svc-app
+    app: bankapp-eta-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: healthcare-svc-app
+      app: bankapp-eta-app
   template:
     metadata:
       labels:
-        app: healthcare-svc-app
+        app: bankapp-eta-app
     spec:
       containers:
-      - name: healthcare-svc-container
-        image: loksaieta/healthcare-svc-app
+      - name: bankapp-eta-container
+        image: loksaieta/bankapp-eta-app
         ports:
         - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: healthcare-svc-np-service
+  name: bankapp-eta-np-service
   labels:
-    app: healthcare-svc-app
+    app: bankapp-eta-app
 spec:
   selector:
-    app: healthcare-svc-app
+    app: bankapp-eta-app
 
   type: NodePort
   ports:
-  - nodePort: 31030
+  - nodePort: 31030  
     port: 8082
     targetPort: 8082
