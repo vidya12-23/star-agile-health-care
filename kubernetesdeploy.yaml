@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: healthcare-svc-container
-        image: loksaieta/bankapp-eta-app
+        image: vidyashree2002/healthcare-svc-app
         ports:
         - containerPort: 8082
 ---
