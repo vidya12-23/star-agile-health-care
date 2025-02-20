@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: healthcare-svc-deploy
+  name: bankapp-eta-deploy
   labels:
-    app: healthcare-svc-app
+    app: bankapp-eta-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: healthcare-svc-app
+      app: bankapp-eta-app
   template:
     metadata:
       labels:
-        app: healthcare-svc-app
+        app: bankapp-eta-app
     spec:
       containers:
       - name: bankapp-eta-container
@@ -23,9 +23,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: healthcare-svc-np-service
+  name: bankapp-eta-np-service
   labels:
-    app: healthcare-svc-app
+    app: bankapp-eta-app
 spec:
   selector:
     app: bankapp-eta-app
