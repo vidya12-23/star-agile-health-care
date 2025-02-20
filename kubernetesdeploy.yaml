@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankapp-eta-np-service
+  name: healthcare-svc-np-service
   labels:
     app: bankapp-eta-app
 spec:
